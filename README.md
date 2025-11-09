@@ -5,15 +5,15 @@ Simple RESTful API built with Laravel 10 and Sanctum for authentication. Feature
 
 ## Setup
 1. Clone repo
-2. `composer install`
-3. Copy `.env.example` to `.env` and set DB credentials
+2. Run `composer install`
+3. Copy `.env.example` to `.env` and set DB credentials. Create a `.env` file for this.
 4. create database `tasks_mgt` and set DB_CONNECTION=mysql
-5. `php artisan key:generate`
-6. `php artisan migrate`
-7. `php artisan serve`
+6. Run `php artisan key:generate`
+7. Run `php artisan migrate`
+8. Run `php artisan serve`
 
 ## API Endpoints
-- POST /api/register {name,email,password,password_confirmation}
+- POST /api/register {name,email,password}
 - POST /api/login {email,password}
 - POST /api/logout (auth)
 Tasks
@@ -46,10 +46,9 @@ Body:
 
 json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "Confidence Edwin",
+  "email": "ce@example.com",
   "password": "password",
-  "password_confirmation": "password"
 }
 Response:
 
@@ -57,8 +56,8 @@ json
 {
   "user": {
     "id": 1,
-    "name": "John Doe",
-    "email": "john@example.com",
+    "name": "Confidence Edwin",
+    "email": "ce@example.com",
     "created_at": "2023-01-01T00:00:00.000000Z",
     "updated_at": "2023-01-01T00:00:00.000000Z"
   },
@@ -73,7 +72,7 @@ Body:
 
 json
 {
-  "email": "john@example.com",
+  "email": "ce@example.com",
   "password": "password"
 }
 Response: Same as register
