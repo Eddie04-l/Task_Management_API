@@ -7,7 +7,7 @@ Simple RESTful API built with Laravel 10 and Sanctum for authentication. Feature
 1. Clone repo
 2. Run `composer install`
 3. Copy `.env.example` to `.env` and set DB credentials. Create a `.env` file for this.
-4. create database `tasks_mgt` and set DB_CONNECTION=mysql
+4. create database `tasks_mgt`, set DB credentials and set DB_CONNECTION=mysql
 6. Run `php artisan key:generate`
 7. Run `php artisan migrate`
 8. Run `php artisan serve`
